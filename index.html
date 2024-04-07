@@ -13,12 +13,12 @@
                 <button>🌓</button>
             </div>
                 <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">☰</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Archived Posts</a>
-                            <a href="#">Add Entry</a>
-                            <a href="#">Find</a>
-                        </div>
+                    <button class="dropbtn">☰</button>
+                        <ul id="myDropdown" class="dropdown-content">
+                            <li><a href="#">Archived Posts</a></li>
+                            <li data-modal="addEntry">Add Entry</li>
+                            <li data-modal="find">Find</li>
+                        </ul>
                 </div>
             </div>
         </nav>
@@ -26,6 +26,7 @@
     </header>
 
     <main>
+        <!-- swap section and div -->
         <div>
             <section>
                 <h2 class="h21">Welcome!</h2>
@@ -41,13 +42,24 @@
         <div class="container">
             <button id="addentrybtn">LET'S START!</button>
         </div>
+    <section class="modal" id="addEntryModal">
+        <div>
+            <h1>Add Entry</h1>
+        </div>
+    </section>
+    <section class="modal" id="findModal">
+            <div>
+                <h1>Find</h1>
+            </div>
+    </section>
+
     </main>
 
     <footer>
         &copy; 2024 UCB Coding Boot Camp
         <a href="#">BRAIN HURTS</a>
     </footer>
-
-    <script src="./assets/js/scripts.js"></script> 
+    
+    <script src="./assets/js/scripts.js"></script>
 </body>
 </html>

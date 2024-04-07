@@ -8,6 +8,18 @@ body {
     background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,121,16,1) 35%, rgba(0,212,255,1) 100%);
 }
 
+main {
+    position: relative;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
 .dropbtn {
     width: 50px;
     height: 50px;
@@ -28,16 +40,23 @@ body {
 
 .dropdown-content {
     display: none;
-    position: absolute;
+    /* position: absolute;
     background-color: black;
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+    z-index: 1; */
 }
 
 .dropdown-content a:hover {background-color: #ddd;}
 
-.show {display:block;}
+.show {
+    display:block;
+    position: absolute;
+    background-color: black;
+    min-width: 160px;
+    /* box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2); */
+    z-index: 1;
+}
 
 .dropdown-content a {
     color: white;
@@ -108,6 +127,29 @@ h1 {
     font-size: 25px;
     border-radius: 10px;
     box-shadow: 3px 3px white;
+}
+
+.modal {
+    display: none;
+}
+
+.modal div {
+    background-color: white;
+    text-align: center;
+}
+
+.display {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    width: 300px;
+    height: 300px;
+    /* background-color: rgba(0, 0, 0, 0.329); */
+    background-color: black;
+    justify-content: center;
+    align-items: center;
+    top: -250px;
+    left: 250px;
 }
 
 footer {
