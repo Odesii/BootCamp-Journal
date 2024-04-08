@@ -1,7 +1,4 @@
-const modal = document.querySelector('.modal'); 
-const btn = document.querySelector('#btn') 
-const close = document.querySelector('.modal-close')// Giphy werk (;
-
+// Giphy werk (;
 const giphyList = document.querySelector('#giphyUl')
 const giphyAPIKey = 'x6k9Oyo3vy4ha1dy1xYlxVuo79ltCB6t'
 const searchGiphy = document.getElementById("search-giphy");
@@ -23,6 +20,13 @@ function getGiphy() {
     });
 
 }
+
+const modal =  
+document.querySelector('.modal'); 
+const btn =  
+document.querySelector('#btn'); 
+const close =  
+document.querySelector('.modal-close'); 
 
 btn.addEventListener('click', 
                function () { 
