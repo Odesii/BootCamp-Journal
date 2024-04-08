@@ -10,7 +10,7 @@ html,
 body {
   width: 100vw;
   height: 100vh;
-} /* just to be sure these are full screen*/
+} 
 
 canvas {
   z-index: -1;
