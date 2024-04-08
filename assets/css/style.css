@@ -63,6 +63,11 @@ canvas {
   transform: translate(0, 100%);
 }
 
+.is-family-monospace {
+  display: flex;
+  flex-flow: column wrap;
+  position: relative;
+}
 .animate .letter {
   display: inline-block;
   transform-origin: center;
