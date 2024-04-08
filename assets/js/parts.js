@@ -121,6 +121,5 @@ anime.timeline({loop: true})
           optionsContainer.style.display = "none";
         }
       })
-     
     }
   });

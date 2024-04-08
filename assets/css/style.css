@@ -62,3 +62,9 @@ canvas {
   position: absolute;
   transform: translate(0, 100%);
 }
+
+
+.animate .letter {
+  display: inline-block;
+  transform-origin: center;
+}
