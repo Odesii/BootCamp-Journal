@@ -1,52 +1,24 @@
-// const navbar = document.querySelector(".navbar");
-// const dropdownButton = document.querySelector(".dropbtn");
-// // const entryModal = document.querySelector(".addEntryModal");
-// const dropdownContent = document.querySelector("#myDropdown");
-// const addEntryModal = document.querySelector("#addEntryModal");
-// const findModal = document.querySelector("#findModal");
+const giphyList = document.querySelector('#giphyUl')
+const giphyAPIKey = 'x6k9Oyo3vy4ha1dy1xYlxVuo79ltCB6t'
+const searchGiphy = document.getElementById("search-giphy");
 
-// // function myFunction() {
-// //     document.getElementById("myDropdown").classList.toggle("show");
-// // }
+// GIPHY SEARCH FUNCTION
+function getGiphy() {
+    const giphyURL = 'https://api.giphy.com/v1/stickers/search?api_key=x6k9Oyo3vy4ha1dy1xYlxVuo79ltCB6t&q=cats&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips';
 
-// // window.onclick = function(event) {
-// //     if (!event.target.matches('.dropbtn')) {
-// //       var dropdowns = document.getElementsByClassName("dropdown-content");
-// //       var i;
-// //       for (i = 0; i < dropdowns.length; i++) {
-// //         var openDropdown = dropdowns[i];
-// //         if (openDropdown.classList.contains('show')) {
-// //           openDropdown.classList.remove('show');
-// //         }
-// //       }
-// //     }
-// //   }
-// function displayNavBar() {
-//   if (dropdownContent.classList.contains("show")) {
-//     dropdownContent.classList.replace("show", "dropdown-content")
-//   } else {
-//     dropdownContent.classList.replace("dropdown-content", "show")
-//   }
-// }
-// function displayModal(event) {
-//   const selection = event.target.dataset.modal
-//     if (selection === "addEntry") {
-//       addEntryModal.classList.add("display")
-//       dropdownContent.classList.replace("show", "dropdown-content")
-//     } else if (selection === "find") {
-//       findModal.classList.add("display")
-//       dropdownContent.classList.replace("show", "dropdown-content")
-//     } else {
-//       dropdownContent.classList.replace("show", "dropdown-content")
-//     }
-// }
-// dropdownButton.addEventListener("click", displayNavBar);
+    fetch(giphyURL).then(function(response) {
+        return response.json();
+    })
+    .then(function(data){
+        console.log(data)
+        for (let i=0; i < data.data.length; i++) {
+            const listItem = document.createElement('li');
+            listItem.textContent = data.data[i].url;
+            giphyList.appendChild(listItem);
+        }
+    });
 
-// dropdownContent.addEventListener("click", displayModal);
+}
 
 
-
-
-
-
-
+searchGiphy.addEventListener('click', getGiphy);
