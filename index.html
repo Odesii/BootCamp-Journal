@@ -1,53 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boot Camp Journal</title>
-    <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-    <header>
-        <nav class="navbar">
-            <div id="togglebtn">
-                <button>🌓</button>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script defer src="./assets/js/parts.js"></script>
+    <script defer src="./assets/js/scripts.js"></script>
+
+  </head>
+  <body>
+    <div class="container">
+        <img src="./assets/images/notes.png"/>
+        <div class="text-column">
+            <h1 class="animate">Struggling?</h1>
+            <button type="submit" id="sayBtn">Say Something</button>
+            <div id="options" style="display: none;">
+                <!-- Should pop up a modal for user input -->
+                <button class="move" id="addBtn">ADD</button>
+                <!-- Should lead to all previous entries -->
+                <button class="move" id="Pervious">Pervious Entries</button>
+                <!-- search by date? -->
+                <button class="move" id="Find">Find</button>
             </div>
-                <div class="dropdown">
-                    <button onclick="myFunction()" class="dropbtn">☰</button>
-                        <div id="myDropdown" class="dropdown-content">
-                            <a href="#">Archived Posts</a>
-                            <a href="#">Add Entry</a>
-                            <a href="#">Find</a>
-                        </div>
-                </div>
-            </div>
-        </nav>
-        <h1>Boot Camp Journal</h1><br>
-    </header>
-
-    <main>
-        <div>
-            <section>
-                <h2 class="h21">Welcome!</h2>
-                    <img class="notebook" src="//i.etsystatic.com/10927943/r/il/ac5400/4341032726/il_300x300.4341032726_alxl.jpg">
-            </section>
         </div>
-        <div>
-            <h2 class="h22">Struggling?</h2>
-                <p class="p1">
-                    Share your thoughts below! This shit sucks!
-                </p>
-        </div>
-        <div class="container">
-            <button id="addentrybtn">LET'S START!</button>
-        </div>
-    </main>
-
-    <footer>
-        &copy; 2024 UCB Coding Boot Camp
-        <a href="#">BRAIN HURTS</a>
-    </footer>
-
-    <script src="./assets/js/scripts.js"></script> 
-</body>
+    </div>
+    <canvas id="test"></canvas>
+  </body>
 </html>

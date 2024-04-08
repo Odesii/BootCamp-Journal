@@ -1,3 +1,1 @@
 # BootCamp-Journal
-
-# Description
