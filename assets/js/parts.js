@@ -98,14 +98,29 @@ anime.timeline({loop: true})
   });
 
   document.getElementById('sayBtn').addEventListener('click', function() {
-    var optionsContainer = document.getElementById('options');
+    var optionsContainer = document.querySelector('#options');
   
     // Check if options are currently hidden
     if (optionsContainer.style.display === "none") {
       optionsContainer.style.display = "flex"; 
       optionsContainer.style.flexDirection = "column";// Make the container visible
-      
+      anime({
+        targets: '.move',
+        translateY: [0, 20],
+        opacity: [0, 1],
+        delay: anime.stagger(100),
+      })
+
     } else {
-      optionsContainer.style.display = "none";
+      anime({
+        targets: '.move',
+        translateY: [20, 0],
+        opacity: [1, 0],
+        delay: anime.stagger(100),
+        complete: function(anim){
+          optionsContainer.style.display = "none";
+        }
+      })
+     
     }
   });
