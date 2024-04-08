@@ -102,16 +102,9 @@ anime.timeline({loop: true})
   
     // Check if options are currently hidden
     if (optionsContainer.style.display === "none") {
-      optionsContainer.style.display = "block"; // Make the container visible
+      optionsContainer.style.display = "flex"; 
+      optionsContainer.style.flexDirection = "column";// Make the container visible
       
-      anime({
-        targets: '#optionsContainer button', // Target the buttons within the container
-        opacity: [0, 1], // Fade in from transparent to opaque
-        translateY: [-20, 0], // Move from 20px above to their original position
-        delay: anime.stagger(100), // Delay each button's animation slightly more than the previous
-        duration: 800, // Duration of the animation
-        easing: 'easeOutExpo', // Use an easing function for a smooth effect
-      });
     } else {
       optionsContainer.style.display = "none";
     }

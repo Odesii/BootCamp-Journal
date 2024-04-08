@@ -14,7 +14,6 @@ body {
 } /* just to be sure these are full screen*/
 
 canvas {
-    position: absolute;
   z-index: -1;
   overflow: hidden;
   width: 100vw;
@@ -60,3 +59,9 @@ canvas {
     font-size: 150%;
   }
 
+.options{
+    display: flex;
+    flex-direction: column;
+    display: none
+
+}
