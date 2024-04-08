@@ -123,3 +123,11 @@ anime.timeline({loop: true})
       })
     }
   });
+
+  document.querySelector('#previous').addEventListener('click', function() {
+    location.href = 'posts.html';
+  });
+
+  document.querySelector('#find').addEventListener('click', function(){
+    location.href = 'about.html';
+  });
