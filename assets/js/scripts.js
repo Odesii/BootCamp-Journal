@@ -41,10 +41,11 @@ function newModal() {
                         <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
                     </div>
                     <button class="button is-info" id="lookupWord">Look Up</button>
+                    <button class="button is-info" id="findMore">Better Words</div>
                     <div id="dictionaryResults" class="content"></div>
                     </div>
                   <div class="field">
-                      <label class="label" for="content">Content</label>
+                      <label class="label has-text-centered" for="content">Write Some Thing</label>
                       <div class="control">
                           <textarea class="textarea" id="content" rows="12"></textarea>
                       </div>
@@ -59,6 +60,7 @@ function newModal() {
 
     
     modal.querySelector('#lookupWord').addEventListener('click', test2);
+    modal.querySelector("#findMore").addEventListener('click', test2)
 //   sets the close button on the modal and
     modal.querySelector('.modal-close').addEventListener('click', function() {
       modal.classList.remove('is-active');
