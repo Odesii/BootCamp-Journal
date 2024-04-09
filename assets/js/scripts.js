@@ -1,61 +1,54 @@
-
-
-const modal =  
-document.querySelector('.modal'); 
-const btn =  
-document.querySelector('#btn'); 
-const close =  
-document.querySelector('.modal-close'); 
-
-btn.addEventListener('click', 
-               function () { 
-modal.style.display = 'block' 
-}) 
-
-close.addEventListener('click', 
-                 function () { 
-modal.style.display = 'none' 
-}) 
-
-window.addEventListener('click', 
-                  function (event) { 
-if (event.target.className ===  
-'modal-background') { 
-modal.style.display = 'none' 
-} 
-}) 
-
-
-
+//one Function to generate a modal
 function newModal() {
-  const modal = document.createElement("div");
-  modal.classList.add("modal");
-
-  modal.classList.add("is-active");
-
-  modal.innerHTML = `<div class="modal-background"></div>
-        <div class="modal-content">
-            <div class="box">
-                <h1 class="title" id="textT">Share Some Words</h1>
-                <form class="is-family-monospace">
-                <label for="gif">How you feeling?</label>
-                <input type="text" id="gif"/>
-                <label  for="date">Date</lable>
-                <input type"text" id="date"/>
-                <label for="title"></label>
-                <input type"text" id="title/>
-                <label for="content">Content</label>
-                <textarea id="content" rows="12"></textarea>
-                </form>
-            </div>
-        </div>
-        <button class="modal-close is-large" aria-label="close"></button>`;
-
-        document.body.appendChild(modal);
-
-        modal.querySelector('.modal-close').addEventListener('click', function(){
-            modal.classList.remove('is-active');
-        })
-}
-
-document.getElementById('addBtn').addEventListener('click', newModal);
+    //creates a base div to start from
+    const modal = document.createElement("div");
+    //gives the first div the modal and is active class from BULMA
+    modal.classList.add("modal", "is-active");
+  //adds the structure bones and guts for the modal 
+  //sets a background, box, and form for user inputs using BULMA 
+    modal.innerHTML = `
+      <div class="modal-background"></div>
+      <div class="modal-content">
+          <div class="box has-text-centered">
+              <h1 class="title" id="textT">What's the Vibe</h1>
+          </div>
+          <form class="is-family-monospace">
+              <div class="box">
+                  <div class="field">
+                      <label class="label" for="gif">Tasty GIF?</label>
+                      <div class="control">
+                          <input class="input" type="text" id="gif"/>
+                      </div>
+                  </div>
+                  <div class="field">
+                      <label class="label" for="date">Date</label>
+                      <div class="control">
+                          <input class="input" type="text" id="date"/>
+                      </div>
+                  </div>
+                  <div class="field">
+                      <label class="label" for="title">Title</label>
+                      <div class="control">
+                          <input class="input" type="text" id="title"/>
+                      </div>
+                  </div>
+                  <div class="field">
+                      <label class="label" for="content">Content</label>
+                      <div class="control">
+                          <textarea class="textarea" id="content" rows="12"></textarea>
+                      </div>
+                  </div>
+              </div>
+              <button type="submit">Send It</button>
+          </form>
+      </div>
+      <button class="modal-close is-large" aria-label="close"></button>`;
+  //adds the modal to the body of the html for user display 
+    document.body.appendChild(modal);
+//   sets the close button on the modal and
+    modal.querySelector('.modal-close').addEventListener('click', function() {
+      modal.classList.remove('is-active');
+    });
+  }
+  
+  document.getElementById('addBtn').addEventListener('click', newModal);
