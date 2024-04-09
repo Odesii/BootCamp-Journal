@@ -40,14 +40,14 @@ function newModal() {
                     <div class="control">
                         <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
                     </div>
-                    <button class="button is-info" id="lookupWord">Look Up</button>
-                    <button class="button is-info" id="findMore">Better Words</div>
+                    <button class="button is-info is-small" id="lookupWord">Look Up</button>
+                    <button class="button is-info is-small" id="findMore">Better Words</div>
                     <div id="dictionaryResults" class="content"></div>
                     </div>
                   <div class="field">
                       <label class="label has-text-centered" for="content">Write Some Thing</label>
                       <div class="control">
-                          <textarea class="textarea" id="content" rows="12"></textarea>
+                          <textarea class="textarea" id="content" rows="8"></textarea>
                       </div>
                   </div>
               </div>
