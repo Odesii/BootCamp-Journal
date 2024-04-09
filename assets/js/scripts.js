@@ -19,6 +19,9 @@ function newModal() {
                       <div class="control">
                           <input class="input" type="text" id="gif"/>
                       </div>
+                      <div>
+                      <div class="gif-results" style= "margin-top: 20px;"></div>
+                      </div>
                   </div>
                   <div class="field">
                       <label class="label" for="date">Date</label>
@@ -52,3 +55,5 @@ function newModal() {
   }
   
   document.getElementById('addBtn').addEventListener('click', newModal);
+
+
