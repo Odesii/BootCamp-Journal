@@ -36,6 +36,14 @@ function newModal() {
                       </div>
                   </div>
                   <div class="field">
+                    <label class="label" for="dictionaryLookup">Look Up a Word</label>
+                    <div class="control">
+                        <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
+                    </div>
+                    <button class="button is-info" id="lookupWord">Look Up</button>
+                    <div id="dictionaryResults" class="content"></div>
+                    </div>
+                  <div class="field">
                       <label class="label" for="content">Content</label>
                       <div class="control">
                           <textarea class="textarea" id="content" rows="12"></textarea>
@@ -48,12 +56,20 @@ function newModal() {
       <button class="modal-close is-large" aria-label="close"></button>`;
   //adds the modal to the body of the html for user display 
     document.body.appendChild(modal);
+
+    
+    modal.querySelector('#lookupWord').addEventListener('click', test2);
 //   sets the close button on the modal and
     modal.querySelector('.modal-close').addEventListener('click', function() {
       modal.classList.remove('is-active');
+
     });
   }
+
+
+
+
   
   document.getElementById('addBtn').addEventListener('click', newModal);
-
+  
 
