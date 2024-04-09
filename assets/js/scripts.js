@@ -51,12 +51,14 @@ function newModal() {
                       </div>
                   </div>
               </div>
-              <button type="submit">Send It</button>
+              <button type="submit" id="sendit">Send It</button>
           </form>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>`;
   //adds the modal to the body of the html for user display 
     document.body.appendChild(modal);
+    const button =  modal.querySelector("#sendit");   
+    button.addEventListener("click", submitBlogEntry);
 
     
     modal.querySelector('#lookupWord').addEventListener('click', test2);
@@ -75,3 +77,44 @@ function newModal() {
   document.getElementById('addBtn').addEventListener('click', newModal);
   
 
+
+// const formElement = document.querySelector("form");
+
+// redirect to our previous posts page
+const toArchivedPosts = function() {
+    location.href = "./posts.html";
+}
+
+// storing data to local storage -- possibly can be omitted
+// const storeBlogDataLocalStorage = function(data) {
+//     const blogEntries = readBlogDataFromLocalStorage();
+//     blogEntries.push(data);
+//     const stringData = JSON.stringify(blogEntries);
+
+//     localStorage.setItem("blogEntries", stringData);
+// }
+
+function submitBlogEntry(event) {
+    event.preventDefault();
+    
+    let blogs = localStorage.getItem("blogEntries") ? localStorage.getItem("blogEntries") : []
+    const gif = document.querySelector("#gif").value.trim();
+    const date = document.querySelector("#date").value.trim();
+    const title = document.querySelector("#title").value.trim();
+    const content = document.querySelector("#content").value.trim();
+
+    const completedEntry = {
+        gif: gif,
+        date: date,
+        title: title,
+        content: content,
+    }
+    blogs.push(completedEntry)
+
+    localStorage.setItem("blogEntries", JSON.stringify(blogs));
+
+// logs gif, date, title, content entry to console
+// stores gif, date, title, content entry
+// redirect to previous posts page
+    toArchivedPosts();
+}
