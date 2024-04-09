@@ -42,7 +42,7 @@ function newModal() {
                         <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
                     </div>
                     <button class="button is-info is-small" id="lookupWord">Look Up</button>
-                    <button class="button is-info is-small" id="findMore">Better Words</div>
+                    <button class="button is-info is-small" id="findMore">Better Words</button>
                     <div id="dictionaryResults" class="content"></div>
                     </div>
                   <div class="field">
