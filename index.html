@@ -5,70 +5,38 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Boot Camp Journal</title>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"
+    ></script>
     <script defer src="./assets/js/parts.js"></script>
     <script defer src="./assets/js/scripts.js"></script>
-
   </head>
   <body>
     <div class="container">
-        <img src="./assets/images/notes.png"/>
-        <div class="text-column">
-            <h1 class="animate">Struggling?</h1>
-            <button type="submit" id="sayBtn">Say Something</button>
-            <div id="options" style="display: none;">
-              <!-- giphy button -->
-              <button class="move" id="search-giphy">Search</button>
-              <!-- here is where the giphy is displayed with the 'li' and 'img' elements -->
-              <ul id="giphyUl"></ul>
-              <!-- dictionary button -->
-              <button class="movei" id="search-dictionary">Search a word</button>
-              <!-- here is where the dictionary is displayed with the 'li' elements -->
-              <ul id="dictionaryUl"></ul>
-                <!-- Should pop up a modal for user input -->
-                <button class="move" id="addBtn">ADD</button>
-                <!-- Should lead to all previous entries -->
-                <button class="move" id="previous">Pervious Entries</button>
-                <!-- search by date? -->
-                <button class="move" id="find">Find</button>
-            </div>
+      <img src="./assets/images/notes.png" />
+      <div class="text-column">
+        <h1 class="animate">Struggling?</h1>
+        <button type="submit" id="sayBtn">Say Something</button>
+        <div id="options" style="display: none">
+          <!-- giphy button -->
+          <button class="move" id="search-giphy">Search</button>
+          <!-- here is where the giphy is displayed with the 'li' and 'img' elements -->
+          <ul id="giphyUl"></ul>
+          <!-- dictionary button -->
+          <button class="move" id="search-dictionary">Search a word</button>
+          <!-- here is where the dictionary is displayed with the 'li' elements -->
+          <ul id="dictionaryUl"></ul>
+          <!-- Should pop up a modal for user input -->
+          <button class="move" id="addBtn">ADD</button>
+          <!-- Should lead to all previous entries -->
+          <button class="move" id="previous">Pervious Entries</button>
+          <!-- search by date? -->
+          <button class="move" id="find">Find</button>
         </div>
+      </div>
+      <
     </div>
     <canvas id="test"></canvas>
-    <!-- Test -->
-    <div class='container has-text-centered'> 
-      <div class='columns is-mobile is-centered'> 
-        <div class='column is-4'> 
-          <button class="button is-primary" id='btn'>Click to see modal</button> 
-            <div class="modal"> 
-              <div class="modal-background"></div> 
-                <div class="modal-content"> 
-    
-                <div class='box'> 
-                  <h1 class='title' 
-                    style='color: rgb(255, 0, 200)'>Modal Test</h1> 
-                      <form class='is-family-monospace'> 
-                        <label for="Name">Name</label>
-                        <input type="text" id="name">
-                        <label for="Date">Date</label>
-                        <input type="text" id="date">
-                        <label for="Content">Content</label>
-                        <textarea id="content" rows="12"></textarea>
-                      </form>
-                <div class='buttons'> 
-                  <button class='button is-fullwidth'> 
-                    Submit
-                  </button> 
-                </div> 
-              </div> 
-            </div> 
-            <button class="modal-close is-large" 
-                    aria-label="close"> 
-              Model 
-            </button> 
-          </div> 
-        </div> 
-      </div> 
-    </div> 
   </body>
 </html>
