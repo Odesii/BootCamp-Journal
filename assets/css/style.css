@@ -76,3 +76,29 @@ canvas {
 #textT{
   color: #c51c6d
 };
+
+#gifSize:hover{
+  cursor: pointer !important;
+ border: 5px solid pink !important;
+}
+
+#giphyDiv img:hover{
+  cursor: pointer ;
+  box-shadow: 0 0 25px #7089c1;
+  border-radius: 15%;
+}
+
+#select{
+
+  border: 2px solid #c51c6d;
+  border-radius: 15%;
+  box-shadow: 0 0 25px #c51c6d ;
+  animation: spin 1.3s ease-in-out;
+
+}
+
+@keyframes spin {
+  0% {
+      transform: rotate(-360deg);
+  }
+}
