@@ -15,21 +15,31 @@ Lessons learned: In developing Bootcamp Journal, we acquired proficiency in esse
 - [Credits](#credits)
 - [License](#license)
 
-## Installation
+## Technology Used
+
+HTML, CSS, Javascript, Bulma, AnimeJS
+APIs: Giphy, Dictionary, DataMUSE
+
 To get started:
 
-1. Install all the assets
-2. Start on separating your files to keep things organized as so
-3. Start with HTML then JS and lastly CSS to decorate
-Live Link:
+1. Access the live link
+2. Hover over the 'Add' tab and click on it   
+3. Module will pop-out and ask for user inputs to create your journal entry
+4. The 'Previous Entries' will display all of your past posts
+5. The 'Resources' tab will direct you to a resource page
+
+Live Link: https://odesii.github.io/bootcamp-journal/
 
 ## Usage
-![Mock up of ](./assets/images/Main%20Page.png)
+![](./assets/images/main-page.gif)
+
+
+![](./assets/images/API.gif)
 
 ## Credits 
-Alic - https://github.com/Odesii
-Gabriela - https://github.com/GaviDev8
-Nick - https://github.com/nbruggeman92
+[Alic(https://github.com/Odesii)]
+[Gabriela(https://github.com/GaviDev8)]
+[Nick(https://github.com/nbruggeman92)]
 
 ## License 
 MIT License
