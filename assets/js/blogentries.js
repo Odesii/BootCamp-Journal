@@ -41,3 +41,28 @@ const renderBlogList = function () {
 };
 
 renderBlogList();
+
+// posts page storing form data to local storage
+document.getElementById("posts-form").addEventListener("submit", function(event) {
+  event.preventDefault();
+
+  const dateInput = document.getElementById("dateInput").value.trim();
+  const titleInput = document.getElementById("titleInput").value.trim();
+  const contentInput = document.getElementById("contentInput").value.trim();
+
+  const blogFormInputData = {
+    dateInput: dateInput,
+    titleInput: titleInput,
+    contentInput: contentInput,
+  };
+  storeBlogFormInputData(blogFormInputData);
+});
+
+function storeBlogFormInputData(blogFormInputData) {
+  const storedBlogFormInputData = JSON.parse(localStorage.getItem("blogFormInputData")) || [];
+
+  storedBlogFormInputData.push(blogFormInputData);
+
+  localStorage.setItem("blogFormInputData", JSON.stringify(storeBlogFormInputData));
+  renderBlogList();
+}

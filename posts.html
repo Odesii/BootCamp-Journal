@@ -10,8 +10,22 @@
     <script defer src="./assets/js/blogentries.js"></script>
   </head>
   <body>
+    <div>
+    <a id="backbtn" href="javascript:window.history.back();">BACK</a>
+    </div>
     <div class="container">
       <h1 class="page-title">Gather Your Thoughts</h1>
+    </div>
+    <div class="about-page-form">
+      <form id="posts-form">
+        <label for="dateInput">Date:</label><br>
+        <input type="text" id="dateInput"><br>
+        <label for="titleInput">Title:</label><br>
+        <input type="text" id="titleInput"><br>
+        <label for="contentInput">Content:</label><br>
+        <textarea type="text" id="contentInput" rows="8"></textarea><br>
+        <button type="submit">Submit</button>
+      </form>
     </div>
     <canvas id="test"></canvas>
   </body>
