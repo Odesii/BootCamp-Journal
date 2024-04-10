@@ -33,7 +33,7 @@ const renderBlogList = function () {
     gif.setAttribute("src", blogEntries[index].gif);
     article.appendChild(gif);
     
-    article.classList.add("card");
+    // article.classList.add("card");
 
     mainElement.appendChild(article);
   }
