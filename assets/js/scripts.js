@@ -20,14 +20,14 @@ function newModal() {
                           <input class="input" type="text" id="gif"/>
                       </div>
                       <!-- giphy button -->
-                    <button class="move" id="search-giphy">Search</button>
+                    <button class="button is-info is-small"" id="search-giphy">Search</button>
                     <!-- here is where the giphy is displayed with the 'li' and 'img' elements -->
                     <div id="giphyDiv"></div>
                   </div>
                   <div class="field">
                       <label class="label" for="date">Date</label>
                       <div class="control">
-                          <input class="input" type="text" id="date"/>
+                          <input class="input" type="date" id="date"/>
                       </div>
                   </div>
                   <div class="field">

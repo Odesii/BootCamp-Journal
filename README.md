@@ -21,7 +21,8 @@ To get started:
 1. Install all the assets
 2. Start on separating your files to keep things organized as so
 3. Start with HTML then JS and lastly CSS to decorate
-Live Link:
+
+Live Link: https://odesii.github.io/bootcamp-journal/
 
 ## Usage
 ![Mock up of ](./assets/images/Main%20Page.png)
