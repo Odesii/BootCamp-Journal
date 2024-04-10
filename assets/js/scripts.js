@@ -41,8 +41,8 @@ function newModal() {
                     <div class="control">
                         <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
                     </div>
-                    <button class="button is-info is-small" id="lookupWord">Look Up</button>
-                    <button class="button is-info is-small" id="findMore">Better Words</button>
+                    <button class="button is-info is-small" id="lookupWord">Meaning</button>
+                    <button class="button is-info is-small" id="findMore">Get Fancy</button>
                     <div id="dictionaryResults" class="content"></div>
                     </div>
                   <div class="field">
@@ -52,15 +52,16 @@ function newModal() {
                       </div>
                   </div>
               </div>
-              <button type="submit" id="sendit">Send It</button>
+              <button type="submit" id="sendIt">Send It</button>
           </form>
       </div>
       <button class="modal-close is-large" aria-label="close"></button>`;
   //adds the modal to the body of the html for user display
   document.body.appendChild(modal);
-  const button = modal.querySelector("#sendit");
+  const button = modal.querySelector("#sendIt");
   button.addEventListener("click", submitBlogEntry);
-  
+
+  // logic for clicking buttons 
   modal.querySelector('#lookupWord').addEventListener('click', test2);
   modal.querySelector("#findMore").addEventListener('click', test2)
   //   sets the close button on the modal and
@@ -72,22 +73,40 @@ function newModal() {
 
   modal
     .querySelector("#search-giphy")
-    .addEventListener("click", function (event) {
+    .addEventListener("click", async function (event) {
       // Function to get giphy to work in modal
       event.preventDefault();
       const topic = modal.querySelector("#gif").value;
       console.log(topic);
-      getGiphy(topic);
+      await getGiphy(topic);
+      
+        modal.querySelector("#giphyDiv").addEventListener("click", function(event){
+          console.log(event.target);
+          console.log(modal.querySelectorAll("img"))
+          modal.querySelectorAll("img").forEach((Element)=>{
+            console.log(Element.style)
+            Element.removeAttribute("id")
+          })
+          console.log(event.target.nodeName)
+          if(event.target.nodeName.toLowerCase() === "img"){
+          event.target.setAttribute("id", "select")
+          console.log(event.target.getAttribute("src"))
+          localStorage.setItem("gif", event.target.getAttribute("src"))
+        }
+        })
+
     });
 }
+
+
 // GIPHY SEARCH FUNCTION
-function getGiphy(topic) {
+async function getGiphy(topic) {
     // G's work --> #sorry alic
     // Giphy werk (;
     const giphyDiv = document.getElementById("giphyDiv");
     const giphyAPIKey = "x6k9Oyo3vy4ha1dy1xYlxVuo79ltCB6t";
 
-    const giphyURL = `https://api.giphy.com/v1/stickers/search?api_key=x6k9Oyo3vy4ha1dy1xYlxVuo79ltCB6t&q=${topic}&limit=5&offset=0&rating=g&lang=en&bundle=messaging_non_clips`;
+    const giphyURL = `https://api.giphy.com/v1/stickers/search?api_key=${giphyAPIKey}&q=${topic}&limit=5&offset=0&lang=en`;
     // fetching giphy data and looping please note 'data' element is a element for giphy as well hence the data.data line
     fetch(giphyURL)
       .then((response) => response.json())
@@ -96,7 +115,9 @@ function getGiphy(topic) {
         giphyDiv.innerHTML = ""; // this line
         data.data.forEach((giphy) => {
           const giphyImg = document.createElement("img"); // this line creates a new image element in the HTML
-          giphyImg.src = giphy.images.original.url; // this line will use the giphy url to display the giphs
+          giphyImg.setAttribute("id", "gifSize");
+          giphyImg.setAttribute("style", "width: 100px")
+          giphyImg.src = giphy.images.original.url; // this line will use the giphy url to display the gif
           giphyDiv.appendChild(giphyImg);
         });
       });
@@ -104,35 +125,22 @@ function getGiphy(topic) {
 
 document.getElementById("addBtn").addEventListener("click", newModal);
 
-// const formElement = document.querySelector("form");
 
 // redirect to our previous posts page
 const toArchivedPosts = function () {
   location.href = "./posts.html";
 };
 
-// storing data to local storage -- possibly can be omitted
-// const storeBlogDataLocalStorage = function(data) {
-//     const blogEntries = readBlogDataFromLocalStorage();
-//     blogEntries.push(data);
-//     const stringData = JSON.stringify(blogEntries);
-
-//     localStorage.setItem("blogEntries", stringData);
-// }
-
 function submitBlogEntry(event) {
   event.preventDefault();
 
-  let blogs = localStorage.getItem("blogEntries")
-    ? localStorage.getItem("blogEntries")
-    : [];
-  const gif = document.querySelector("#gif").value.trim(); // FIGURE OUT LOGIC ON HOW YOU WANT TO SAVE GIFS 
+  let blogs = localStorage.getItem("blogEntries") ? localStorage.getItem("blogEntries"): [];
+  // const gif = document.querySelector("#gif").value.trim(); // FIGURE OUT LOGIC ON HOW YOU WANT TO SAVE GIFS 
   const date = document.querySelector("#date").value.trim();
   const title = document.querySelector("#title").value.trim();
   const content = document.querySelector("#content").value.trim();
 
   const completedEntry = {
-    gif: gif,
     date: date,
     title: title,
     content: content,
