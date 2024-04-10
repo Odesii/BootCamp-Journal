@@ -133,14 +133,13 @@ const toArchivedPosts = function () {
 
 function submitBlogEntry(event) {
   event.preventDefault();
-
-  let blogs = localStorage.getItem("blogEntries") ? localStorage.getItem("blogEntries"): [];
-  // const gif = document.querySelector("#gif").value.trim(); // FIGURE OUT LOGIC ON HOW YOU WANT TO SAVE GIFS 
+  let blogs = localStorage.getItem("blogEntries") ? JSON.parse(localStorage.getItem("blogEntries")): [];
   const date = document.querySelector("#date").value.trim();
   const title = document.querySelector("#title").value.trim();
   const content = document.querySelector("#content").value.trim();
-
+  const gif = localStorage.getItem('gif');
   const completedEntry = {
+    gif: gif,
     date: date,
     title: title,
     content: content,
