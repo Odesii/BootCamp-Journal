@@ -1,7 +1,7 @@
 # BootCamp-Journal 📓 ✍️
 
 ## Description 
-Bootcamp Journal is a platform designed to facilitate creative writing and self-reflection for users, providing a structured outlet to articulate goals, thoughts, and reflections. 
+Bootcamp Journal is a platform designed to facilitate creative writing and self-reflection for users, providing a structured outlet to articulate goals, thoughts, and reflections. Users have an option to select a GIF or look up a word to help them craft their journal entry. 
 
 Motivation: The primary aim of Bootcamp Journal is to aid users in organizing their thoughts and tracking progress while participating in academic bootcamps. Bootcamps offer intensive learning experiences condensed into short periods, making it crucial to have a tool for managing the learning process effectively.
 
@@ -24,7 +24,7 @@ To get started:
 Live Link:
 
 ## Usage
-![Mock up of ]()
+![Mock up of ](./assets/images/Main%20Page.png)
 
 ## Credits 
 Alic - https://github.com/Odesii
