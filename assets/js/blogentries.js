@@ -9,7 +9,7 @@ const readBlogDataFromLocalStorage = function () {
     return data;
 }
 
-// placing content in h2 elements
+//
 const renderBlogList = function () {
     const blogEntries = readBlogDataFromLocalStorage();
     const gifData = localStorage.getItem("gif") 
