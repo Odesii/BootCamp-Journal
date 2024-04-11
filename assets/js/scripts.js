@@ -25,19 +25,19 @@ function newModal() {
                     <div id="giphyDiv"></div>
                   </div>
                   <div class="field">
-                      <label class="label" for="date">Date</label>
+                      <label class="label" for="date">Juncture</label>
                       <div class="control">
                           <input class="input" type="date" id="date"/>
                       </div>
                   </div>
                   <div class="field">
-                      <label class="label" for="title">Title</label>
+                      <label class="label" for="title">Epithet</label>
                       <div class="control">
                           <input class="input" type="text" id="title"/>
                       </div>
                   </div>
                   <div class="field">
-                    <label class="label" for="dictionaryLookup">Look Up a Word</label>
+                    <label class="label" for="dictionaryLookup">Find Your Mind</label>
                     <div class="control">
                         <input class="input" type="text" id="dictionaryLookup" placeholder="Enter word"/>
                     </div>
@@ -46,7 +46,7 @@ function newModal() {
                     <div id="dictionaryResults" class="content"></div>
                     </div>
                   <div class="field">
-                      <label class="label has-text-centered" for="content">Write Some Thing</label>
+                      <label class="label has-text-centered" for="content">What Hell Do You Endure</label>
                       <div class="control">
                           <textarea class="textarea" id="content" rows="8"></textarea>
                       </div>
