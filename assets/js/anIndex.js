@@ -7,10 +7,9 @@ anime.timeline({loop: true})
     targets: '.animate .letter',
     scale: [4,1],
     opacity: [0,1],
-    translateZ: 0,
     easing: "easeOutExpo",
     duration:1050,
-    delay: (el, i) => 70*i
+    delay:  (el, i) => 70*i
   }).add({
     targets: '.animate',
     opacity: 0,
