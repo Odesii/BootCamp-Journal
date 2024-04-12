@@ -6,8 +6,6 @@ anime({
   targets: '.move',
   translateY: -50
 })
-
-
 //rotates arrow on click
 document.getElementById('extra').addEventListener('click', function(){
 anime({

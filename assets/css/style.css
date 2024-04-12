@@ -102,6 +102,26 @@ canvas {
   animation: spin 1.3s ease-in-out;
 
 }
+
+.modeBtn{
+  display:flex;
+  justify-content: space-between;
+}
+.modeBtn button{
+  color: #7089c1;
+  text-shadow: 0 0 15px rgb(43, 42, 42);
+  font-family: "Anton";
+  font-size: 150%;
+  margin-inline: 30px;
+}
+.modeBtn #close{
+  color: #ffffff2c;
+
+}
+
+
+
+
 @media screen and (max-width: 700px){
 
   .container{
