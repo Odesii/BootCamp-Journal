@@ -52,10 +52,12 @@ function newModal() {
                       </div>
                   </div>
               </div>
+              <div class="modeBtn">
               <button type="submit" id="sendIt">Send It</button>
+              <button  id="close" >X</button
+              </div
           </form>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>`;
+      </div>`;
   //adds the modal to the body of the html for user display
   document.body.appendChild(modal);
   const button = modal.querySelector("#sendIt");
