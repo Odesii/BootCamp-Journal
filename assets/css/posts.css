@@ -32,7 +32,8 @@ canvas {
 }
 
 #extra{
-  margin-left: 5%;
+  margin-inline: 5%;
+
   cursor: pointer;
   z-index: 2;
 }

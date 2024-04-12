@@ -67,7 +67,7 @@ function newModal() {
   modal.querySelector('#lookupWord').addEventListener('click', test2);
   modal.querySelector("#findMore").addEventListener('click', test2)
   //   sets the close button on the modal and
-  modal.querySelector(".modal-close").addEventListener("click", function () {
+  modal.querySelector("#close").addEventListener("click", function () {
     modal.classList.remove("is-active");
   });
 

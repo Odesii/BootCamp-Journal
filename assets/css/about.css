@@ -29,12 +29,18 @@ canvas {
     background: radial-gradient(circle, rgba(63, 45, 89, 1) 0%, rgba(0, 0, 0, 1) 100%);
 }
 
-img {
+.drew {
     position: absolute;
-    top: 90%;           
-    left: 10%;          
-    transform: translate(-50%, -50%); 
+    top: 65%;           
+    left: 0%;          
   z-index: 1;
+}
+.oni {
+  scale: .4;
+    position: absolute;
+    rotate: 220deg;
+    top: -22%;           
+    right: -10%;          
 }
 
 .overlay {

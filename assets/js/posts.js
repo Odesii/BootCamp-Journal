@@ -25,9 +25,9 @@ function newModal() {
                       <div id="giphyDiv"></div>
                     </div>
                     <div class="field">
-                        <label class="label">Juncture</label>
+                        <label class="label" for="date">Juncture</label>
                         <div class="control">
-                            <input class="input" type="date" id="date"/>
+                            <input class="input" type="date" id="dateEntry"/>
                         </div>
                     </div>
                     <div class="field">
@@ -133,7 +133,7 @@ function newModal() {
   function submitBlogEntry(event) {
     // event.preventDefault();
     let blogs = localStorage.getItem("blogEntries") ? JSON.parse(localStorage.getItem("blogEntries")): [];
-    const date = document.querySelector("#date").value;
+    let date = document.querySelector("#dateEntry").value.trim();
     const title = document.querySelector("#title").value.trim();
     const content = document.querySelector("#content").value.trim();
     const gif = localStorage.getItem('gif');
