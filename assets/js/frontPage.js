@@ -52,10 +52,12 @@ function newModal() {
                       </div>
                   </div>
               </div>
+              <div class="modeBtn">
               <button type="submit" id="sendIt">Send It</button>
+              <button  id="close" >X</button
+              </div
           </form>
-      </div>
-      <button class="modal-close is-large" aria-label="close"></button>`;
+      </div>`;
   //adds the modal to the body of the html for user display
   document.body.appendChild(modal);
   const button = modal.querySelector("#sendIt");
@@ -65,7 +67,7 @@ function newModal() {
   modal.querySelector('#lookupWord').addEventListener('click', test2);
   modal.querySelector("#findMore").addEventListener('click', test2)
   //   sets the close button on the modal and
-  modal.querySelector(".modal-close").addEventListener("click", function () {
+  modal.querySelector("#close").addEventListener("click", function () {
     modal.classList.remove("is-active");
   });
 

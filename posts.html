@@ -6,6 +6,7 @@
     <title>AAAAAAAAAAA</title>
     <link rel="stylesheet" href="./assets/css/posts.css" />
     <script defer src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.2/anime.min.js"></script>
+    <script defer src="./assets/js/anPosts.js"></script> 
     <script defer src="./assets/js/parts.js"></script>
     <script defer src="./assets/js/blogentries.js"></script>
     <script defer src="./assets/js/posts.js"></script>
@@ -20,7 +21,11 @@
   <div class="mainContainer">
     <canvas id="test"></canvas>
     <h1 class="page-title">Gather Your Thoughts</h1>
-    <div  id="addBtn">MORE?</div>
+    <img id="extra" src="./assets/images/arrow.webp"/>
+    <div id="options" style="display: none">
+      <button class="move" id="addBtn">MORE?</button>
+      <button class="move" id="back">Return</button>
+    </div>
     <div class="postContainer"></div>
     <a href="./index.html">BACK</a>
     <!-- <div class="about-page-form">
